@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="giohang">
+        <a onclick="showcart();"><img src="anh/cart.png"><span id="countsp">0</span></a>
+    </div>
+     <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+            </tbody>
+        </table>
+    </div> -->
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+                    <iframe src="index.html" width=""frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/1.jpg" alt=""></div>
+                    <p>$<span>40</span></p>
+                    <a href="#">Lamborghini SC20</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/2.jpg" alt=""></div>
+                    <p>$<span>20</span></p>
+                    <a href="#">Mercedes-Benz</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="anh/3.jpg" alt=""></div>
+                    <p>$<span>30</span></p>
+                    <a href="#">Lamborghini Huracan EVO</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/4.jpg" alt=""></div>
+                    <p>$<span>40</span></p>
+                    <a href="#">Bugatti Chiron</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/5.jpg" alt=""></div>
+                    <p>$<span>50</span></p>
+                    <a href="#">Bugatti La Voiture Noire</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="anh/6.jpg" alt=""></div>
+                    <p>$<span>60</span></p>
+                    <a href="#">Lamborghini Aventador SVJ</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/7.jpg" alt=""></div>
+                    <p>$<span>70</span></p>
+                    <a href="#"> Pagani Huayra Coupe</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="anh/8.jpg" alt=""></div>
+                    <p>$<span>80</span></p>
+                    <a href="#">Rolls-Royce Sweptail</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="anh/9.jpg" alt=""></div>
+                    <p>$<span>90</span></p>
+                    <a href="#"> BMW i8</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js">
+   showcountsp();
+
+</script>
+</body>
+
+</html>
