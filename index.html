@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <style>
+        .contai img{
+            width: 800px;
+            margin: auto;           
+            font-size: 22px;
+            border: double 10px rgb(24, 214, 103);
+            background-color: aqua;
+        }
+        img{
+           
+            height: 300px;
+        }
+    </style>
+    <script>
+        var anh = [];
+        var index = 0;
+        var sohinh = 10;
+
+        for ( var i=0; i < sohinh; i++){
+            anh[i] = new Image();
+            anh[i].src = "anh/" + i + ".jpg"
+        }
+      
+        
+        function back(){
+            index++;
+            if(index >= anh.length) index=1;
+            var linh = document.getElementById("Anh");
+            linh.src = anh[index].src;
+            document.getElementById("baiasm").innerHTML=index;
+        }
+        function next(){
+            index--;
+            if(index <0) index = anh.length - 1;
+            var linh = document.getElementById("Anh");
+            linh.src = anh[index].src;
+            document.getElementById("baiasm").innerHTML=index;
+        }
+    </script>
+</head>
+<body align="center">
+    <div class="contai">
+        <h2>XE</h2>
+        <img src="anh/1.jpg" id="Anh">
+      <div> <span id="baiasm">1</span>/9</div>
+        <div class="btn_contai">
+            <button onclick="next()">Next</button>
+            <button onclick="back()">Back</button>
+         
+        </div>
+    </div>
+</body>
+</html>
