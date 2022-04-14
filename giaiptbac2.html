@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <script>
+  
+
+        function choso(){
+            var a = Math.round( Math.random()*10);
+            var b = Math.round( Math.random()*10);
+            var c = Math.round( Math.random()*10);
+            document.getElementById("a").value = a;
+            document.getElementById("b").value = b;
+            document.getElementById("c").value = c;
+
+            var btn = document.getElementById("btngiai");
+            btn.disabled = false;
+        }
+        function giaipt(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var btn = document.getElementById("btngiai");
+            btn.disabled = true;
+            // if(isNaN(a) || isNaN(b) || isNa(c)){
+            //     alert("Hệ số  nhập không hợp lệ");
+            // }else{
+
+            var delta = b * b - 4*a*c;
+            if(delta < 0){ 
+                document.getElementById("kq").innerHTML = "PT vô nghiệm";
+            }
+            else if(delta == 0){  
+                document.getElementById("kq").innerHTML = "PT có nghiệm kép x =" + - b / (2 * a).toFixed(2);
+            }
+            else{
+                document.getElementById("kq").innerHTML = 
+            "PT có 2 nghiệm phân biệt <br> x1 = " + ((- b +Math.sqrt(delta)) / (2 * a)).toFixed(2) + "<br> x2 = " + - ((-b +Math.sqrt(delta)) / (2 * a)).toFixed(2);
+
+             } 
+            }
+           
+        // }
+        var dem = 0;
+
+        function soLanGiai(){   
+        Number(dem);
+         dem++;
+         document.getElementById("slg").innerHTML=dem;
+         }
+       
+    </script>
+</head>
+<body>
+   <div class="container">
+      <h3>GIẢI PHƯƠNG TRÌNH BẬC 2: ax <sup>2</sup> + bx + c = 0</h3>
+     <p>Số lần giải:  <strong><span id="slg"></span></p></strong>
+      <hr>
+      <form>
+          <p><labe>Nhập số a: </labe><input type="text" id="a"> </p>
+          <p><labe>Nhập số b: </labe><input type="text" id="b"> </p>
+          <p><labe>Nhập số c: </labe><input type="text" id="c"> </p>
+          <button  type="button" disabled id ="btngiai"  onclick="giaipt();soLanGiai();">GIẢI PT</button>
+          <button type="button" id ="cs" onclick="choso();">CHO SỐ</button>
+      </form>
+     <div id="kq"></div>
+     <p id="dongho"></p>
+     <script>
+         var today = new Date();
+         var ng = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+         document.getElementById("dongho").innerHTML =ng;
+     </script>
+   </div>
+</body>
+</html>
